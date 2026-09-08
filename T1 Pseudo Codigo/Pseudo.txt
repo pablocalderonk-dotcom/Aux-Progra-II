@@ -1,0 +1,138 @@
+PROGRAMACION II
+PRACTICA GENERAL DE AUXILIATURA
+PARALELO “D”
+NOMBRE: CALDERON KHUNO PABLO SANTOS 
+CI: 14476198
+EJERCICIO # 1
+Inicio
+    Clase Motocicleta
+        Atributos: fabricante, referencia, fabricacion, recorrido, tono
+        Método Constructor(fab, ref, fabri, rec, ton)
+            fabricante <- fab
+            referencia <- ref
+            fabricacion <- fabri
+            recorrido <- rec
+            tono <- ton
+        Fin Método
+
+        Método mostrar_recorrido()
+            metros_recorridos <- recorrido * 1000
+            Imprimir "Recorrido: " + recorrido + " km (" + metros_recorridos + " metros)"
+        Fin Método
+
+        Método modificar_tono(nuevo_tono)
+            tono <- nuevo_tono
+        Fin Método
+    Fin Clase
+
+    Moto1 <- Nuevo Motocicleta("Yamaha", "FZ 25", 2022, 8500, "Negro")
+    Moto2 <- Nuevo Motocicleta("Honda", "CB 190R", 2023, 5200, "Blanco")
+
+    Moto1.modificar_tono("Azul Marino")
+    Moto2.modificar_tono("Rojo Intenso")
+
+    Moto1.mostrar_recorrido()
+    Moto2.mostrar_recorrido()
+Fin
+EJERCICIO # 2
+Inicio
+    Clase Laptop
+        Atributos: fabricante, cpu, memoria_ram, disco
+        Método Constructor(fab, c, mem, d)
+            fabricante <- fab
+            cpu <- c
+            memoria_ram <- mem
+            disco <- d
+        Fin Método
+
+        Método comprobar_ram(valor)
+            Retornar (memoria_ram == valor)
+        Fin Método
+
+        Método visualizar()
+            Imprimir fabricante, cpu, memoria_ram, disco
+        Fin Método
+    Fin Clase
+
+    laptop1 <- Nuevo Laptop("Lenovo", "Intel Core i7", 16, 512)
+    laptop2 <- Nuevo Laptop(fabricante="Acer", cpu="AMD Ryzen 5", memoria_ram=8, disco=1024)
+
+    R <- 16
+    Si laptop1.comprobar_ram(R) Entonces
+        Imprimir laptop1
+    Fin Si
+
+    Si laptop1.disco > laptop2.disco Entonces
+        laptop1.visualizar()
+    Sino
+        laptop2.visualizar()
+    Fin Si
+Fin
+EJERCICIO # 3
+Inicio
+    Clase Tablet
+        Atributos: fabricante, referencia, capacidad, carga
+        Método Constructor(fab, ref, cap, car)
+            fabricante <- fab
+            referencia <- ref
+            capacidad <- cap
+            carga <- car
+        Fin Método
+
+        Método comprobar_carga(limite)
+            Retornar (carga < limite)
+        Fin Método
+
+        Método visualizar()
+            Imprimir fabricante, referencia, capacidad, carga
+        Fin Método
+    Fin Clase
+
+    tablet1 <- Nuevo Tablet("Apple", "iPad Air", 64, 18)
+    tablet2 <- Nuevo Tablet(fabricante="Huawei", referencia="MatePad 11", capacidad=128, carga=72)
+
+    L <- 25
+    Si tablet1.comprobar_carga(L) Entonces
+        Imprimir tablet1
+    Fin Si
+
+    Si tablet1.capacidad > tablet2.capacidad Entonces
+        tablet1.visualizar()
+    Sino
+        tablet2.visualizar()
+    Fin Si
+Fin
+EJERCICIO # 4
+Inicio
+    Clase Revista
+        Atributos: nombre, escritor, cantidad_paginas, costo
+        Método Constructor(nom, esc, pag, cos)
+            nombre <- nom
+            escritor <- esc
+            cantidad_paginas <- pag
+            costo <- cos
+        Fin Método
+
+        Método comprobar_costo(limite)
+            Retornar (costo > limite)
+        Fin Método
+
+        Método visualizar()
+            Imprimir nombre, escritor, cantidad_paginas, costo
+        Fin Método
+    Fin Clase
+
+    rev1 <- Nuevo Revista("El mundo perdido", "Arthur Conan Doyle", 350, 18.75)
+    rev2 <- Nuevo Revista(nombre="Viaje al centro de la Tierra", escritor="Julio Verne", cantidad_paginas=280, costo=15.00)
+
+    C <- 17.50
+    Si rev1.comprobar_costo(C) Entonces
+        Imprimir rev1
+    Fin Si
+
+    Si rev1.cantidad_paginas > rev2.cantidad_paginas Entonces
+        rev1.visualizar()
+    Sino
+        rev2.visualizar()
+    Fin Si
+Fin
